@@ -6,6 +6,37 @@ const Landing = () => {
   const [showS, setShowS] = useState(false);
   const [showL, setShowL] = useState(false)
 
+  const loginSubmit = (e) => {
+    e.preventDefault();
+    
+    //we are sending username and PW to the frontend as lowercase keys
+    const username = e.target.elements.user.value;
+    const password = e.target.elements.pass.value;
+
+    const requestBody = { username, password };
+    if (username === '' || password === '') {
+      return alert('username or password cannot be blank');
+    }
+    console.log(requestBody);
+    setShowL(false)
+    e.target.reset();
+  };
+
+  const signupSubmit = (e) => {
+    e.preventDefault();
+    //we are sending username and PW to the frontend as lowercase keys
+    const username = e.target.elements.user.value;
+    const password = e.target.elements.pass.value;
+
+    const requestBody = { username, password };
+    if (username === '' || password === '') {
+      return alert('username or password cannot be blank');
+    }
+    console.log(requestBody);
+    setShowS(false)
+    e.target.reset();
+  };
+
   return (
     <div className='landing'>
       <header className='logo'></header>
@@ -16,9 +47,9 @@ const Landing = () => {
           <p>lorem ipsum</p>
           <div className='btn-box'>
             <button onClick={() => setShowL(true)}>Log In</button>
-            <LoginModal onClose={() => setShowL(false)} showL={showL} />
+            <LoginModal onSubmit={loginSubmit} onClose={() => setShowL(false)} showL={showL} />
             <button onClick={() => setShowS(true)}>Create an Account</button>
-            <SignupModal onClose={() => setShowS(false)} showS={showS} />
+            <SignupModal onSubmit={signupSubmit} onClose={() => setShowS(false)} showS={showS} />
           </div>
         </div>
       </div>
