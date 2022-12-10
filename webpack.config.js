@@ -9,13 +9,13 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
-  devServer:{
+  devServer: {
     // host:'localhost',
     // hot: true,
     // port:8080,
     proxy: {
       '/': 'http://localhost:3000',
-    }
+    },
   },
   module: {
     rules: [
@@ -26,9 +26,9 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
       },
       // SCSS
       {
@@ -36,16 +36,16 @@ module.exports = {
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
-    //   {
-    //     test: /.(ts|tsx)$/,
-    //     exclude: /node_modules/,
-    //     use: ['style-loader', 'css-loader', 'sass-loader'],
-    //   },
-    ]
+      //   {
+      //     test: /.(ts|tsx)$/,
+      //     exclude: /node_modules/,
+      //     use: ['style-loader', 'css-loader', 'sass-loader'],
+      //   },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname,'./src/index.html'),
+      template: path.resolve(__dirname, './src/index.html'),
       filename: 'index.html',
     }),
     //plugin to extract css
