@@ -1,90 +1,54 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const config = {
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js'
-  ],
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+  },
+  devServer:{
+    // host:'localhost',
+    // hot: true,
+    // port:8080,
+    proxy: {
+      '/': 'http://localhost:3000',
+    }
   },
   module: {
     rules: [
+      // Babel-Loader
       {
-        test: /\.(js|jsx)$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          'postcss-loader'
-        ],
-        exclude: /\.module\.css$/
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
-        test: /\.svg$/,
-        use: 'file-loader'
-      },
-      {
-        test: /\.png$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              mimetype: 'image/png'
-            }
+        test: /.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
-        ]
+        }
       },
+      // SCSS
       {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              modules: true
-            }
-          },
-          'postcss-loader'
-        ],
-        include: /\.module\.css$/
-      }
+        test: /.(css|scss)$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    //   {
+    //     test: /.(ts|tsx)$/,
+    //     exclude: /node_modules/,
+    //     use: ['style-loader', 'css-loader', 'sass-loader'],
+    //   },
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      templateContent: ({ htmlWebpackPlugin }) => '<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>' + htmlWebpackPlugin.options.title + '</title></head><body><div id=\"app\"></div></body></html>',
+      template: path.resolve(__dirname,'./src/index.html'),
       filename: 'index.html',
     }),
-    new MiniCssExtractPlugin()
+    //plugin to extract css
+    new MiniCssExtractPlugin(),
   ],
-  devServer: {
-    'static': {
-      directory: './dist'
-    }
-  }
 };
-
-module.exports = config;

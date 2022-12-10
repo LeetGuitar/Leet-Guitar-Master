@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import "./styles.css";
-import "./styles.scss";
+import App from "./App.jsx";
+// import "./styles.css";
+// import "./styles.scss";
+import { render } from 'react-dom';
 
-
-var mountNode = document.getElementById("app");
-ReactDOM.render(<App name="Jane" />, mountNode);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
