@@ -17,19 +17,19 @@ const SignupModal = () => {
   };
 
   return (
-    <div class='signup'>
+    <div className="signup">
       <h2>This is the signup modal</h2>
-      <form name='signup' onSubmit={signupSubmit}>
-        <label htmlFor='user'>Username</label>
+      <form className="signup" onSubmit={signupSubmit}>
+        <label htmlFor="user">Username</label>
         <br />
-        <input type='text' id='signupUser' name='user' />
+        <input type="text" id="signupUser" name="user" />
         <br />
 
-        <label htmlFor='pass'>Password</label>
+        <label htmlFor="pass">Password</label>
         <br />
-        <input type='text' id='signupPass' name='pass'></input>
+        <input type="text" id="signupPass" name="pass"></input>
         <br />
-        <input type='submit' id='submit' name='submit'></input>
+        <input type="submit" id="submit" name="submit"></input>
       </form>
     </div>
   );

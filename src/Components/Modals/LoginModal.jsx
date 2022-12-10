@@ -17,19 +17,19 @@ const LoginModal = () => {
   };
 
   return (
-    <div class='login'>
+    <div className="login">
       <h2>This is the login modal</h2>
-      <form name='login' onSubmit={loginSubmit}>
-        <label htmlFor='user'>Username</label>
+      <form className="login" onSubmit={loginSubmit}>
+        <label htmlFor="user">Username</label>
         <br />
-        <input type='text' id='loginUser' name='user' />
+        <input type="text" id="loginUser" name="user" />
         <br />
 
-        <label htmlFor='pass'>Password</label>
+        <label htmlFor="pass">Password</label>
         <br />
-        <input type='text' id='loginPass' name='pass'></input>
+        <input type="text" id="loginPass" name="pass"></input>
         <br />
-        <input type='submit' id='submit' name='submit'></input>
+        <input type="submit" id="submit" name="submit"></input>
       </form>
     </div>
   );
