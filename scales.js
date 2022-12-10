@@ -109,7 +109,7 @@ const f_sharp_major = 'F# G# A# B C# D# E# F#';
 
 const f_sharp_mixo = 'F# G# A# B C# D# E F#';
 
-const f_sharp_minor = 'F# G# A B C# D E F#'
+const f_sharp_minor = 'F# G# A B C# D E F#';
 
 // gb
 
