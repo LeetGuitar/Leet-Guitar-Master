@@ -5,8 +5,40 @@
 body {
   margin: 0px;
 }
-.signup {
-  background-color: yellow;
+.signupbox {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 192, 15);
+}
+
+.loginbox {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(241, 192, 15);
+}
+
+#inputbox {
+    border-style: none;
+    border:solid 1px black;
+    border-radius: 5px;
+}
+
+
+
+#submit {
+  display: grid;
+  justify-self: center;
+  border-style: none;
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 .site-title {

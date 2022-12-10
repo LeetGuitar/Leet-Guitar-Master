@@ -1,6 +1,9 @@
 import React from 'react';
 
-const LoginModal = () => {
+const LoginModal = (props) => {
+  if (!props.showL) {
+    return null;
+  }
   const loginSubmit = (e) => {
     e.preventDefault();
     //we are sending username and PW to the frontend as lowercase keys
@@ -17,19 +20,20 @@ const LoginModal = () => {
   };
 
   return (
-    <div className="login">
-      <h2>This is the login modal</h2>
-      <form className="login" onSubmit={loginSubmit}>
-        <label htmlFor="user">Username</label>
+    <div className='loginbox'>
+      <form className='login' onSubmit={loginSubmit}>
+        <h4>Login</h4>
+        <label htmlFor='user'>Username</label>
         <br />
-        <input type="text" id="loginUser" name="user" />
+        <input type='text' id='loginUser' id='inputbox' name='user' />
         <br />
 
-        <label htmlFor="pass">Password</label>
+        <label htmlFor='pass'>Password</label>
         <br />
-        <input type="text" id="loginPass" name="pass"></input>
+        <input type='text' id='loginPass' id='inputbox' name='pass'></input>
         <br />
-        <input type="submit" id="submit" name="submit"></input>
+        <input type='submit' id='submit' name='submit'></input>
+        <a href='#' onClick={props.onClose}>close</a>
       </form>
     </div>
   );
