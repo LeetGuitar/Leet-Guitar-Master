@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-
+const apiRouter = require('./routes/api');
 // const { allowedNodeEnvironmentFlags } = require('process');
 
 const app = express();
@@ -9,10 +9,13 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.use('/api', apiRouter);
+
 app.get('/', express.static(path.join(__dirname, '../build')));
 app.use('/build', express.static(path.join(__dirname, '../build')));
 
 app.use((req,res)=>res.sendStatus(404));
+
 app.use((err, req, res, next) => {
   const defaultErr = {
     log: 'Express error handler caught unknown middleware error',
