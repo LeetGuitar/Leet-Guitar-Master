@@ -1,17 +1,13 @@
-import React from "react";
-// import Landing from 'landing.jsx';
+import React from 'react';
+import Landing from './Components/Landing.jsx';
 
-class App extends React.Component {
-  render() {
-    return (
-      <>
-        <h1 >
-          Hello
-          {/* <Landing />x */}
-        </h1>
-      </>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <h1>Good morning Amrit</h1>
+      <Landing />
+    </div>
+  );
+};
 
 export default App;
