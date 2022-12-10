@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server/server.js",
+        "start": "nodemon server/server.js",
         "dev": "concurrently \"nodemon server/server.js \" \"webpack-dev-server --mode development --open  --hot\""
     },
     "repository": {
@@ -20,6 +20,7 @@
     "homepage": "https://github.com/alexanderlin/solo-project#readme",
     "dependencies": {
         "bcrypt": "^5.1.0",
+        "bcryptjs": "^2.4.3",
         "express": "^4.18.2",
         "mongoose": "^6.8.0",
         "react": "^18.2.0",

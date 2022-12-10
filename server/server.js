@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-const api =require('./routes/api');
+const apiRouter = require('./routes/api');
 // const { allowedNodeEnvironmentFlags } = require('process');
 
 const app = express();
