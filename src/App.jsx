@@ -7,8 +7,8 @@ import { Route, Routes } from 'react-router-dom';
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/main" element={<Main />} />
+      <Route path="/landing" element={<Landing />} />
+      <Route path="/" element={<Main />} />
       {/* <Route path="/user" element={<UserInfo />} /> */}
     </Routes>
   );
