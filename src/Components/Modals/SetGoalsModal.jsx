@@ -6,6 +6,13 @@ import Focus3 from './Goal-Steps/Focus3.jsx';
 
 function SetGoalsModal() {
   const [page, setPage] = useState(0);
+  const [formData, setFormData] = useState({
+    practiceTime: 0,
+    focus1: '',
+    focus2: '',
+    focus3: '',
+  });
+
   const FormTitles = [
     'How many minutes do you want to study today?',
     'What is your top priority for your practice today?',
@@ -15,13 +22,13 @@ function SetGoalsModal() {
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <Minutes />;
+      return <Minutes formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
-      return <Focus1 />;
+      return <Focus1 formData={formData} setFormData={setFormData} />;
     } else if (page === 2) {
-      return <Focus2 />;
+      return <Focus2 formData={formData} setFormData={setFormData} />;
     } else {
-      return <Focus3 />;
+      return <Focus3 formData={formData} setFormData={setFormData} />;
     }
   };
 
@@ -29,13 +36,13 @@ function SetGoalsModal() {
     <div className="setGoalsForm">
       <div className="progressbar">
         <div
-          sytle={{
+          style={{
             width:
               page === 0
                 ? '25%'
-                : page === 2
+                : page === 1
                 ? '50%'
-                : page === 3
+                : page === 2
                 ? '75%'
                 : '100%',
           }}
@@ -56,12 +63,16 @@ function SetGoalsModal() {
             Prev
           </button>
           <button
-            disabled={page == FormTitles.length - 1}
             onClick={() => {
-              setPage((currPage) => currPage + 1);
+              if (page === FormTitles.length - 1) {
+                alert('Form Submitteed');
+                console.log(formData);
+              } else {
+                setPage((currPage) => currPage + 1);
+              }
             }}
           >
-            Next
+            {page === FormTitles.length - 1 ? 'Submit' : 'Next'}
           </button>
         </div>
       </div>

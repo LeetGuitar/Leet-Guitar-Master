@@ -79,4 +79,16 @@ body {
   background-color: #777;
 }
 
-/*  */
+/* Goals Modal CSS */
+.progressbar {
+  width: 400px;
+  height: 10px;
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.progressbar div {
+  width: 25%;
+  height: 100%;
+  background-color: rgb(98, 0, 255);
+}
