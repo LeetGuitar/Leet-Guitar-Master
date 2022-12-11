@@ -10,9 +10,9 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    // host:'localhost',
+    host:'localhost',
     // hot: true,
-    // port:8080,
+    port:8080,
     proxy: {
       '/': 'http://localhost:3000',
     },
