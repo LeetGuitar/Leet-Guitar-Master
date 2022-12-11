@@ -26,12 +26,10 @@ body {
 }
 
 .inputbox {
-    border-style: none;
-    border:solid 1px black;
-    border-radius: 5px;
+  border-style: none;
+  border: solid 1px black;
+  border-radius: 5px;
 }
-
-
 
 #submit {
   display: grid;
@@ -45,6 +43,7 @@ body {
   font-size: 2rem;
 }
 
+/* NAVBAR STYLING =========== */
 .nav {
   background-color: #333;
   color: white;
@@ -79,3 +78,5 @@ body {
 .nav li:hover {
   background-color: #777;
 }
+
+/*  */
