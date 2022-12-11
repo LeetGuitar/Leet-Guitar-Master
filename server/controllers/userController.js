@@ -11,7 +11,7 @@ userController.login = (req, res, next) => {
   const queryString = 'SELECT password, salt FROM users WHERE username=$1';
   db.query(queryString, values, (err, resp) => {
     if(!resp.rows[0] || err) return next({
-      log: 'Express error handler caught in userController.login middleware 1.5',
+      log: 'Express error handler caught in userController.login middleware sql query failed',
       status: 500,
       message: { err: 'query not found' },
     });
@@ -23,7 +23,7 @@ userController.login = (req, res, next) => {
       return next();
     } else {
       return next({
-        log: 'Express error handler caught in userController.login middleware 2',
+        log: 'Express error handler caught in userController.login middleware password was incorrect',
         status: 500,
         message: { err: 'shit dont match' },
       });

@@ -2,10 +2,8 @@ const path = require('path');
 const express = require('express');
 const apiRouter = require('./routes/api');
 // const { allowedNodeEnvironmentFlags } = require('process');
-
 const app = express();
 const PORT = 3000;
-
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
