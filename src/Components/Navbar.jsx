@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import logowhite from '../imgs/logo-white.png';
 
 export default function Navbar() {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        Leet Guitar
+        <img src={logowhite} alt="Leet Guitar Logo" />
       </Link>
       <ul>
-        <CustomLink to="/" value="Main">
+        <CustomLink to="/main" value="Main">
           Main
         </CustomLink>
         <CustomLink to="/practicelog" value="Practice Log">

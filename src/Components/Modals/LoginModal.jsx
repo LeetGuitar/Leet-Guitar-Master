@@ -4,7 +4,7 @@ const LoginModal = (props) => {
   if (!props.showL) {
     return null;
   }
-
+  console.log(props)
   return (
     <div className='loginbox'>
       <form className='login' onSubmit={props.onSubmit} >
