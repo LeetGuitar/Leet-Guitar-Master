@@ -91,7 +91,7 @@ const Landing = () => {
   //after signup or login use navigation hook to route to main
   useEffect(() => {
     if (isLoggedIn === true) {
-      navigate('/');
+      navigate('/main');
     }
   }, [isLoggedIn]);
 

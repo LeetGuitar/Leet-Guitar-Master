@@ -12,8 +12,8 @@ const App = () => {
       <Navbar />
       <div className="container">
         <Routes>
-          <Route path="/landing" element={<Landing />} />
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/user" element={<UserInfo />} />
           <Route path="/practiceLog" element={<PracticeLog />} />
         </Routes>
