@@ -12,10 +12,11 @@ router.post('/login', userController.login, cookieController.setSSIDCookie,
 
 router.post('/signup', userController.signup, cookieController.setSSIDCookie,
   (req, res, next) => res.status(200).json(res.locals.status)
+
 );
 
-router.post('/updatelogin', userController.update,
-  (req, res, next) => res.status(200).json(res.locals)
+router.post('/updatelogin', userController.update, (req, res, next) =>
+  res.status(200).json(res.locals)
 );
 
 router.post('/scales', musicController.getScales,
