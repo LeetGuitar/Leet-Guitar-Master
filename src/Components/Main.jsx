@@ -6,6 +6,7 @@ import ShowGoals from './Modals/ShowGoals.jsx';
 import SetScales from './Modals/SetScales.jsx';
 import ShowScales from './Modals/ShowScales.jsx';
 
+
 const Main = () => {
   const [showGoals, setShowGoals] = useState(false);
   const [formData, setFormData] = useState({
@@ -60,7 +61,9 @@ const Main = () => {
         />
       );
     } else {
-      return <ShowGoals formData={formData} setFormData={setFormData} />;
+      return (
+        <ShowGoals formData={formData} setFormData={setFormData} />
+      );
     }
   };
 
