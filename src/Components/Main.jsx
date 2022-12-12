@@ -17,6 +17,17 @@ const Main = () => {
 
   // set scales state
   const [scales, setScales] = useState({ note: '', accidental: '' }); //sendback string wordkey accidental+not. sharp, flat or nothing
+
+  const getScales = () => {
+    let key = `${scales.note}${scales.accidental}`;
+    console.log(key);
+    fetch('http://localhost:8080/api/scales/', { body: JSON.stringify(key) })
+      .then((data) => data.json)
+      .then((response) => {
+        console.log(response);
+      });
+  };
+
   const goalModal = () => {
     if (!showGoals) {
       return (
@@ -32,11 +43,13 @@ const Main = () => {
     }
   };
 
+  //get scales
+
   return (
     <div className="main">
       {goalModal()}
       <h2>Hi</h2>
-      <SetScales scales={scales} setScales={setScales} />
+      <SetScales scales={scales} setScales={setScales} getScales={getScales} />
     </div>
   );
 };

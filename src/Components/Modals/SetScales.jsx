@@ -1,6 +1,15 @@
 import React from 'react';
 
 function Scales(props) {
+  const notesInScale = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
+  // let radioButtons = []
+
+  // for(let i = 0; i < notesInScale; i++) {
+  //   let inputInfo =
+
+  // }
+
   return (
     <div className="scales-form">
       <div className="notes">
@@ -11,7 +20,7 @@ function Scales(props) {
           id="note-a"
           value="A"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, note: e.target.value });
+            props.setScales({ ...props.scales, note: e.target.value });
           }}
         />
         <label for="note-a">A</label>
@@ -23,7 +32,7 @@ function Scales(props) {
           id="note-b"
           value="B"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, note: e.target.value });
+            props.setScales({ ...props.scales, note: e.target.value });
           }}
         />
         <label for="note-b">B</label>
@@ -35,7 +44,7 @@ function Scales(props) {
           id="note-c"
           value="C"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, note: e.target.value });
+            props.setScales({ ...props.scales, note: e.target.value });
           }}
         />
         <label for="note-c">C</label>
@@ -47,7 +56,7 @@ function Scales(props) {
           id="note-d"
           value="D"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, note: e.target.value });
+            props.setScales({ ...props.scales, note: e.target.value });
           }}
         />
         <label for="note-d">D</label>
@@ -59,7 +68,7 @@ function Scales(props) {
           id="note-e"
           value="E"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, note: e.target.value });
+            props.setScales({ ...props.scales, note: e.target.value });
           }}
         />
         <label for="note-e">E</label>
@@ -71,7 +80,7 @@ function Scales(props) {
           id="note-f"
           value="F"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, note: e.target.value });
+            props.setScales({ ...props.scales, note: e.target.value });
           }}
         />
         <label for="note-f">F</label>
@@ -83,7 +92,7 @@ function Scales(props) {
           id="note-g"
           value="G"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, note: e.target.value });
+            props.setScales({ ...props.scales, note: e.target.value });
           }}
         />
         <label for="note-g">G</label>
@@ -95,22 +104,22 @@ function Scales(props) {
         <input
           type="radio"
           name="accidental"
-          id="none"
-          value="null"
+          id="natural"
+          value=""
           onChange={(e) => {
-            props.setScales({ ...props.Scales, accidental: e.target.value });
+            props.setScales({ ...props.scales, accidental: e.target.value });
           }}
         />
-        <label for="none">None</label>
+        <label for="natural">Natural</label>
         <br />
 
         <input
           type="radio"
           name="accidental"
           id="flat"
-          value="flat"
+          value="b"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, accidental: e.target.value });
+            props.setScales({ ...props.scales, accidental: e.target.value });
           }}
         />
         <label for="flat">Flat</label>
@@ -120,21 +129,18 @@ function Scales(props) {
           type="radio"
           name="accidental"
           id="sharp"
-          value="sharp"
+          value="#"
           onChange={(e) => {
-            props.setScales({ ...props.Scales, accidental: e.target.value });
+            props.setScales({ ...props.scales, accidental: e.target.value });
           }}
         />
         <label for="sharp">Sharp</label>
         <br />
       </div>
       <div className="submit-scales">
-        <button
-          value="Submit"
-          onClick={() => {
-            //add logic here to change conditional in main
-          }}
-        />
+        <button value="Submit" onClick={props.getScales}>
+          Submit
+        </button>
       </div>
     </div>
   );
