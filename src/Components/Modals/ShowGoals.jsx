@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Timer from './Timer.jsx';
 
 function ShowGoals(props) {
   const timeDivider = (focus) => {
@@ -24,6 +25,9 @@ function ShowGoals(props) {
       <h4>
         Focus 3: {props.formData.focus3} for {timeDivider(3)} minutes.
       </h4>
+      <div>
+        <Timer formData={props.formData} />
+      </div>
     </div>
   );
 }
