@@ -40,6 +40,29 @@ h4 {
   margin: 0px;
 }
 
+.main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  .form-container {
+    color:rgb(220, 220, 220);
+    background-color: $dark-black;
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .scales-form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top:50px;
+
+  }
+}
+
+.form-header h2{
+  color:rgb(214, 211, 211);;
+}
+
 .first-div {
   display: flex;
   justify-content: space-between;
@@ -256,7 +279,9 @@ button {
   color: white;
 }
 
+
 // Scales dropdown menu
+
 
 .dropdown-content a:hover {
   background-color: #ddd;

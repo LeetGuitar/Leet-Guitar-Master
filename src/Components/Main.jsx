@@ -72,7 +72,6 @@ const Main = () => {
   return (
     <div className="main">
       {goalModal()}
-      <h2>Hi</h2>
       <SetScales scales={scales} setScales={setScales} getScales={getScales} />
       <ShowScales dailyScales={dailyScales} setDailyScales={setDailyScales} />
     </div>
