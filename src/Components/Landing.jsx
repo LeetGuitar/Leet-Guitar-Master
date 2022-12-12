@@ -66,7 +66,7 @@ const Landing = () => {
         'Content-Type': 'application/json',
       },
       method: 'POST',
-      mode: 'cors',
+      mode: 'no-cors',
       body: JSON.stringify(requestBody), // body data type must match "Content-Type" header
     })
       .then((data) => data.json())

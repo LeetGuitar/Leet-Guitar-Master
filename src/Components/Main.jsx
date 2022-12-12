@@ -15,16 +15,37 @@ const Main = () => {
     focus3: '',
   });
 
-  // set scales state
-  const [scales, setScales] = useState({ note: '', accidental: '' }); //sendback string wordkey accidental+not. sharp, flat or nothing
+  // set scales state to send to database
+  const [scales, setScales] = useState({ note: '', accidental: '' });
+
+  //storing our values received from database
+  const [dailyScales, setDailyScales] = useState({});
+
+  //setting the correct correct scale to practice
 
   const getScales = () => {
     let key = `${scales.note}${scales.accidental}`;
     console.log(key);
-    fetch('http://localhost:8080/api/scales/', { body: JSON.stringify(key) })
-      .then((data) => data.json)
+
+    fetch('http://localhost:8080/api/scales', {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify({ key: key }),
+    })
+      .then((data) => {
+        console.log(`data======`, data.body);
+        return data.json();
+      })
       .then((response) => {
         console.log(response);
+        setDailyScales(response);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   };
 
@@ -50,6 +71,7 @@ const Main = () => {
       {goalModal()}
       <h2>Hi</h2>
       <SetScales scales={scales} setScales={setScales} getScales={getScales} />
+      <ShowScales dailyScales={dailyScales} setDailyScales={setDailyScales} />
     </div>
   );
 };
