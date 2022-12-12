@@ -67,8 +67,7 @@ function SetGoalsModal(props) {
           <button
             onClick={() => {
               if (page === FormTitles.length - 1) {
-                alert('Form Submitteed');
-                console.log(props.formData);
+                props.setShowGoals(true);
               } else {
                 setPage((currPage) => currPage + 1);
               }

@@ -9,7 +9,7 @@ export default function Navbar() {
         <img src={logowhite} alt="Leet Guitar Logo" />
       </Link>
       <ul>
-        <CustomLink to="/" value="Main">
+        <CustomLink to="/main" value="Main">
           Main
         </CustomLink>
         <CustomLink to="/practicelog" value="Practice Log">
