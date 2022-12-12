@@ -18,7 +18,7 @@ app.get('/cookie', cookieController.setCookie, (req,res)=>{
   return res.sendStatus(204);
 });
 
-app.get('/',express.static(path.join(__dirname, '../build')));
+app.get('/', cookieController.setCookie, express.static(path.join(__dirname, '../build')));
 
 app.use((req, res)=>res.sendStatus(404));
 

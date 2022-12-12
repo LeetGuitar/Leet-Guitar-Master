@@ -2,7 +2,7 @@
 
 Ab, A, A# Bb B C C# Db D D# Eb E F F# Gb G G#
 
-INSERT INTO scales CSSFontPaletteValuesRule
+// INSERT INTO scales CSSFontPaletteValuesRule
 // ab
 
 'Ab Bb C Db Eb F G Ab', 'Ab Bb C D Eb F G Ab', 'Ab Bb C D Eb F Gb Ab', 'Ab Bb C Db Eb F Gb Ab', 'Ab Bb Cb Db Eb Fb Gb Ab', 'Ab Bbb Cb Db Eb Fb Gb Ab', 'Ab Bb Cb Db Eb F Gb Ab', 'Ab Bb Cb Db Eb Fb G Ab', 'Ab Bb Cb Db Eb F G Ab'
@@ -118,6 +118,59 @@ const b_dorian = 'B C# D E F# G# A B';
 const b_harmonicminor = 'B C# D E F# G A# B';
 
 const b_melodicminor = 'B C# D E F# G# A# B';
+
+// b#
+
+'B# Cx Dx E# Fx Gx Ax B#', 'B# Cx Dx Ex Fx Gx Ax B#', 'B# Cx Dx Ex Fx Gx A# B#', 'B# Cx Dx E# Fx Gx A# B#', 'B# Cx D# E# Fx G# A# B#', 'B# C# D# E# Fx G# A# B#', 'B# Cx D# E# Fx Gx A# B#', 'B# Cx D# E# Fx G# Ax B#', 'B# Cx D# E# Fx Gx Ax B#'
+
+
+
+
+const b_sharp_major = 'B# Cx Dx E# Fx Gx Ax B#';
+
+const b_sharp_lydian = 'B# Cx Dx Ex Fx Gx Ax B#';
+
+const b_sharp_lydiandominant = 'B# Cx Dx Ex Fx Gx A# B#';
+
+const b_sharp_mixo = 'B# Cx Dx E# Fx Gx A# B#';
+
+const b_sharp_naturalminor = 'B# Cx D# E# Fx G# A# B#';
+
+const b_sharp_phrygian = 'B# C# D# E# Fx G# A# B#';
+
+const b_sharp_dorian = 'B# Cx D# E# Fx Gx A# B#';
+
+const b_sharp_harmonicminor = 'B# Cx D# E# Fx G# Ax B#';
+
+const b_sharp_melodicminor = 'B# Cx D# E# Fx Gx Ax B#';
+
+
+// cb
+
+
+'Cb Db Eb Fb Gb Ab Bb Cb', 'Cb Db Eb F Gb Ab Bb Cb', 'Cb Db Eb F Gb Ab Bbb Cb', 'Cb Db Eb Fb Gb Ab Bbb Cb', 'Cb Db Ebb Fb Gb Abb Bbb Cb', 'Cb Dbb Ebb Fb Gb Abb Bbb Cb', 'Cb Db Ebb Fb Gb Ab Bbb Cb', 'Cb Db Ebb Fb Gb Abb Bb Cb', 'Cb Db Ebb Fb Gb Ab Bb Cb'
+
+
+
+
+const c_flat_major = 'Cb Db Eb Fb Gb Ab Bb Cb';
+
+const c_flat_lydian = 'Cb Db Eb F Gb Ab Bb Cb';
+
+const c_flat_lydiandominant = 'Cb Db Eb F Gb Ab Bbb Cb';
+
+const c_flat_mixo = 'Cb Db Eb Fb Gb Ab Bbb Cb';
+
+const c_flat_naturalminor = 'Cb Db Ebb Fb Gb Abb Bbb Cb';
+
+const c_flat_phrygian = 'Cb Dbb Ebb Fb Gb Abb Bbb Cb';
+
+const c_flat_dorian = 'Cb Db Ebb Fb Gb Ab Bbb Cb';
+
+const c_flat_harmonicminor = 'Cb Db Ebb Fb Gb Abb Bb Cb';
+
+const c_flat_melodicminor = 'Cb Db Ebb Fb Gb Ab Bb Cb';
+
 
 // c
 
@@ -307,6 +360,55 @@ const e_dorian = 'E F# G A B C# D E';
 const e_harmonicminor = 'E F# G A B C D# E';
 
 const e_melodicminor = 'E F# G A B C# D# E';
+
+// e#
+
+
+'E# Fx Gx A# B# Cx Dx E#', 'E# Fx Gx Ax B# Cx Dx E#', 'E# Fx Gx Ax B# Cx D# E#', 'E# Fx Gx A# B# Cx D# E#', 'E# Fx G# A# B# C# D# E#', 'E# F# G# A# B# C# D# E#', 'E# Fx G# A# B# Cx D# E#', 'E# Fx G# A# B# C# Dx E#', 'E# Fx G# A# B# Cx Dx E#'
+
+
+
+const e_sharp_major = 'E# Fx Gx A# B# Cx Dx E#';
+
+const e_sharp_lydian = 'E# Fx Gx Ax B# Cx Dx E#';
+
+const e_sharp_lydiandominant = 'E# Fx Gx Ax B# Cx D# E#';
+
+const e_sharp_mixo = 'E# Fx Gx A# B# Cx D# E#';
+
+const e_sharp_naturalminor = 'E# Fx G# A# B# C# D# E#';
+
+const e_sharp_phrygian = 'E# F# G# A# B# C# D# E#';
+
+const e_sharp_dorian = 'E# Fx G# A# B# Cx D# E#';
+
+const e_sharp_harmonicminor = 'E# Fx G# A# B# C# Dx E#';
+
+const e_sharp_melodicminor = 'E# Fx G# A# B# Cx Dx E#';
+
+// fb
+
+'Fb Gb Ab Bbb Cb Db Eb Fb', 'Fb Gb Ab Bb Cb Db Eb Fb', 'Fb Gb Ab Bb Cb Db Ebb Fb', 'Fb Gb Ab Bbb Cb Db Ebb Fb', 'Fb Gb Abb Bbb Cb Dbb Ebb Fb', 'Fb Gbb Abb Bbb Cb Dbb Ebb Fb', 'Fb Gb Abb Bbb Cb Db Ebb Fb', 'Fb Gb Abb Bbb Cb Dbb Eb Fb', 'Fb Gb Abb Bbb Cb Db Eb Fb'
+
+
+const f_flat_major = 'Fb Gb Ab Bbb Cb Db Eb Fb';
+
+const f_flat_lydian = 'Fb Gb Ab Bb Cb Db Eb Fb';
+
+const f_flat_lydiandominant = 'Fb Gb Ab Bb Cb Db Ebb Fb';
+
+const f_flat_mixo = 'Fb Gb Ab Bbb Cb Db Ebb Fb';
+
+const f_flat_naturalminor = 'Fb Gb Abb Bbb Cb Dbb Ebb Fb';
+
+const f_flat_phrygian = 'Fb Gbb Abb Bbb Cb Dbb Ebb Fb';
+
+const f_flat_dorian = 'Fb Gb Abb Bbb Cb Db Ebb Fb';
+
+const f_flat_harmonicminor = 'Fb Gb Abb Bbb Cb Dbb Eb Fb';
+
+const f_flat_melodicminor = 'Fb Gb Abb Bbb Cb Db Eb Fb';
+
 
 // f
 
