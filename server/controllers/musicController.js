@@ -4,12 +4,13 @@ const musicController = {};
 
 musicController.getScales = (req, res, next) => {
   const { key } = req.body;
-  const queryKey = [ key ];
+  console.log(req.body);
+  const queryKey = [key];
   const queryString = 'SELECT * FROM scales WHERE key=$1';
-  db.query(queryString,queryKey,(err,resp)=>{
-    if(err){
+  db.query(queryString, queryKey, (err, resp) => {
+    if (err) {
       return next({
-        log: 'Express error handler caught in musicController.login middleware sql query failed',
+        log: `Express error handler caught in musicController.login middleware sql query failed ${err}`,
         status: 500,
         message: { err: 'query not found' },
       });
@@ -17,11 +18,9 @@ musicController.getScales = (req, res, next) => {
     res.locals.scales = resp.rows[0];
     return next();
   });
-}
+};
 
 module.exports = musicController;
-
-
 
 // const { username , password } = req.body;
 //   const values = [ username ];
