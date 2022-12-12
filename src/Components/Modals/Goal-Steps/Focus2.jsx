@@ -9,7 +9,7 @@ function Focus2(props) {
         id="focus-1"
         value="Technique"
         onChange={(e) => {
-          props.setFormData({ ...props.formData, focus2: e.target.value });
+          props.setFormData({ ...props.formData, focus1: e.target.value });
         }}
       />
       <label for="focus-1">Technique</label>
