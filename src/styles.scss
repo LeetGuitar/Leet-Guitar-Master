@@ -1,10 +1,84 @@
+// global colors
+$blue: #2accff;
+$yellow: #ffba20;
+$green: #3dcd0a;
+$purple: #a17dd4;
+
+$dark-black: #333;
+$light-black: #36454f;
+
+// global settings
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Archivo Black', sans-serif;
+  color: $dark-black;
+}
+
+.main {
+  margin: 15px;
+  padding: 15px;
+}
+
+//LANDING PAGE STYLING
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.first-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-top: -15px;
+  margin-left: -15px;
+  width: 100vw;
+  height: 50vh;
+  // background-image: url('./imgs/landing-background.png') repeat;
+  background-color: #333;
+  h2 {
+    color: white;
+  }
+}
+
+.first-div .guitarPlayer img {
+  transform: rotate(-15deg);
+  width: 400px;
+  margin-left: 35px;
+}
+
+.second-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-div {
+  padding: 20px;
+  align-content: center;
+  text-align: center;
+}
+
+.guitarPlayer img {
+  border-radius: 100px;
+}
+
+// signup and login forms
 .signupbox {
   display: grid;
   justify-content: center;
@@ -39,19 +113,21 @@ body {
   border-radius: 5px;
 }
 
-.site-title {
-  font-size: 2rem;
-}
-
 /* NAVBAR STYLING =========== */
 .nav {
-  background-color: #333;
+  background-color: $dark-black;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
+  font-size: 16px;
+}
+
+.site-title img {
+  height: 60px;
+  width: auto;
 }
 
 .nav ul {

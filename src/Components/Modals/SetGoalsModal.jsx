@@ -4,14 +4,8 @@ import Focus1 from './Goal-Steps/Focus1.jsx';
 import Focus2 from './Goal-Steps/Focus2.jsx';
 import Focus3 from './Goal-Steps/Focus3.jsx';
 
-function SetGoalsModal() {
+function SetGoalsModal(props) {
   const [page, setPage] = useState(0);
-  const [formData, setFormData] = useState({
-    practiceTime: 0,
-    focus1: '',
-    focus2: '',
-    focus3: '',
-  });
 
   const FormTitles = [
     'How many minutes do you want to study today?',
@@ -22,13 +16,21 @@ function SetGoalsModal() {
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <Minutes formData={formData} setFormData={setFormData} />;
+      return (
+        <Minutes formData={props.formData} setFormData={props.setFormData} />
+      );
     } else if (page === 1) {
-      return <Focus1 formData={formData} setFormData={setFormData} />;
+      return (
+        <Focus1 formData={props.formData} setFormData={props.setFormData} />
+      );
     } else if (page === 2) {
-      return <Focus2 formData={formData} setFormData={setFormData} />;
+      return (
+        <Focus2 formData={props.formData} setFormData={props.setFormData} />
+      );
     } else {
-      return <Focus3 formData={formData} setFormData={setFormData} />;
+      return (
+        <Focus3 formData={props.formData} setFormData={props.setFormData} />
+      );
     }
   };
 
@@ -66,7 +68,7 @@ function SetGoalsModal() {
             onClick={() => {
               if (page === FormTitles.length - 1) {
                 alert('Form Submitteed');
-                console.log(formData);
+                console.log(props.formData);
               } else {
                 setPage((currPage) => currPage + 1);
               }
