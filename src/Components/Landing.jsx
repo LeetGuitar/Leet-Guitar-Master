@@ -4,6 +4,9 @@ import LoginModal from './Modals/LoginModal.jsx';
 import SignupModal from './Modals/SignupModal.jsx';
 import guitarplayer1 from '../imgs/leet-guitar-player-1.png';
 import guitarplayer2 from '../imgs/leet-guitar-player-2.png';
+import icon1 from '../imgs/icon-1.png';
+import icon2 from '../imgs/icon-2.png';
+import icon3 from '../imgs/icon-3.png';
 
 const Landing = () => {
   const [showS, setShowS] = useState(false);
@@ -127,9 +130,18 @@ const Landing = () => {
       <div className="second-div">
         <div className="benefits">
           <h2>Take your guitar playing to the next level</h2>
-          <p>Technique</p>
-          <p>Theory</p>
-          <p>Songs</p>
+          <p className="benefits-paragraph">
+            <img src={icon1} alt="Guitar Player Image" />
+            Technique
+          </p>
+          <p className="benefits-paragraph">
+            <img src={icon2} alt="Guitar Player Image" />
+            Theory
+          </p>
+          <p className="benefits-paragraph">
+            <img src={icon3} alt="Guitar Player Image" />
+            Songs
+          </p>
         </div>
         <div className="guitarPlayer">
           <img src={guitarplayer2} alt="Guitar Player Image" />
