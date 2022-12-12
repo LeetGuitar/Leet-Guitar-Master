@@ -21,10 +21,21 @@ const Main = () => {
   const getScales = () => {
     let key = `${scales.note}${scales.accidental}`;
     console.log(key);
-    fetch('http://localhost:8080/api/scales/', { body: JSON.stringify(key) })
-      .then((data) => data.json)
+    fetch('http://localhost:3000/api/scales', {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify({ key: key }),
+    })
+      .then((data) => data.json())
       .then((response) => {
         console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   };
 
