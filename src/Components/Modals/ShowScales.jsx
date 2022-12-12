@@ -15,8 +15,9 @@ function ShowScales(props) {
   // };
   return (
     <div>
-      <div class="dropdown">
-        <button class="dropbtn">Select Scale</button>
+      <div className="dropdown">
+        <h2 className="practice-heading">Select your scale</h2>
+        <button class="dropbtn">Select</button>
         <div class="dropdown-content">
           <a
             href="#"

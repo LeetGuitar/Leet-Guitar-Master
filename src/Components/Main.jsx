@@ -5,7 +5,8 @@ import SetGoalsModal from './Modals/SetGoalsModal.jsx';
 import ShowGoals from './Modals/ShowGoals.jsx';
 import SetScales from './Modals/SetScales.jsx';
 import ShowScales from './Modals/ShowScales.jsx';
-
+import icon1 from '../imgs/icon-1.png';
+import icon2 from '../imgs/icon-2.png';
 
 const Main = () => {
   const [showGoals, setShowGoals] = useState(false);
@@ -62,7 +63,9 @@ const Main = () => {
       );
     } else {
       return (
-        <ShowGoals formData={formData} setFormData={setFormData} />
+        <div>
+          <ShowGoals formData={formData} setFormData={setFormData} />{' '}
+        </div>
       );
     }
   };
@@ -70,10 +73,41 @@ const Main = () => {
   //get scales
 
   return (
-    <div className="main">
-      {goalModal()}
-      <SetScales scales={scales} setScales={setScales} getScales={getScales} />
-      <ShowScales dailyScales={dailyScales} setDailyScales={setDailyScales} />
+    <div className="main" id="main-page">
+      <h2 class="practice-heading">
+        <img src={icon1} alt="Icon 1" className="icon" />
+        Set your practice goals for today:
+      </h2>
+      <div className="goal-setting">
+        <div>
+          <h3>Set your time and focus goals:</h3>
+          {goalModal()}
+        </div>
+        <div>
+          <h3>Set the scales you want to focus on:</h3>
+          <SetScales
+            scales={scales}
+            setScales={setScales}
+            getScales={getScales}
+          />
+          <ShowScales
+            dailyScales={dailyScales}
+            setDailyScales={setDailyScales}
+          />
+        </div>
+      </div>
+      {/* <h2 class="practice-heading">
+        <img src={icon2} alt="Icon 1" className="icon" />
+        Today's practice details
+      </h2>
+      <div className="daily-practice">
+        <div>
+          <ShowScales
+            dailyScales={dailyScales}
+            setDailyScales={setDailyScales}
+          />
+        </div>
+      </div> */}
     </div>
   );
 };

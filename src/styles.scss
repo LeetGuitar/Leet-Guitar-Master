@@ -41,26 +41,68 @@ h4 {
 }
 
 .main {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr;
   .form-container {
-    color:rgb(220, 220, 220);
-    background-color: $dark-black;
+    color: $dark-black;
+    background-color: white;
+    border: 1px $green solid;
     border-radius: 10px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 30px 50px;
   }
-  .scales-form{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top:50px;
 
+  //MAIN PAGE STYLING
+
+  #main-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .icon {
+    width: 75px;
+  }
+
+  .practice-heading {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: $blue 1px solid;
+    border-top: $blue 1px solid;
+  }
+
+  .goal-setting {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+
+    div {
+      width: 95%;
+    }
+  }
+
+  .scales-form {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
   }
 }
 
-.form-header h2{
-  color:rgb(214, 211, 211);;
+.scale-to-practice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-black;
+  height: 200px;
+  width: 300px;
+  font-size: 50px;
+  color: white;
+  border: 1px solid $dark-black;
+  border-radius: 10px;
+}
+
+.form-header h2 {
+  color: $green;
 }
 
 .first-div {
@@ -279,9 +321,7 @@ button {
   color: white;
 }
 
-
 // Scales dropdown menu
-
 
 .dropdown-content a:hover {
   background-color: #ddd;

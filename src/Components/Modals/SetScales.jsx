@@ -13,7 +13,7 @@ function Scales(props) {
   return (
     <div className="scales-form">
       <div className="notes">
-        <h2>Choose your note</h2>
+        <h2 className="practice-heading">Choose your note</h2>
         <input
           type="radio"
           name="note"
@@ -99,7 +99,7 @@ function Scales(props) {
         <br />
       </div>
       <div>
-        <h2> Choose Accidental</h2>
+        <h2 className="practice-heading"> Choose Accidental</h2>
 
         <input
           type="radio"
