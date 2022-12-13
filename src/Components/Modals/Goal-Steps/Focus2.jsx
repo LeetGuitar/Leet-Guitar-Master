@@ -20,7 +20,7 @@ function Focus2(props) {
         id="focus-2"
         value="Theory"
         onChange={(e) => {
-          props.setFormData({ ...props.formData, focus2: e.target.value });
+          props.setFormData({ ...props.formData, focus1: e.target.value });
         }}
       />
       <label for="focus-2">Theory</label>
@@ -31,7 +31,7 @@ function Focus2(props) {
         id="focus-3"
         value="Songs"
         onChange={(e) => {
-          props.setFormData({ ...props.formData, focus2: e.target.value });
+          props.setFormData({ ...props.formData, focus1: e.target.value });
         }}
       />
       <label for="focus-3">Songs</label>
@@ -42,7 +42,7 @@ function Focus2(props) {
         id="focus-4"
         value="Sight-Reading"
         onChange={(e) => {
-          props.setFormData({ ...props.formData, focus2: e.target.value });
+          props.setFormData({ ...props.formData, focus1: e.target.value });
         }}
       />
       <label for="focus-4">Sight Reading</label>
