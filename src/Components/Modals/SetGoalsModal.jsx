@@ -52,7 +52,7 @@ function SetGoalsModal(props) {
       </div>
       <div className="form-container">
         <div className="form-header">
-          <h1>{FormTitles[page]}</h1>
+          <h2>{FormTitles[page]}</h2>
         </div>
         <div className="form-body">{PageDisplay()}</div>
         <div className="form-footer">
